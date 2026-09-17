@@ -146,8 +146,8 @@ Python · Google Colab (Tesla T4 GPU) · YOLOv8 · Ultralytics · Roboflow · Op
 ## Dataset and Model Weights
 
 Full dataset and model weights available on Google Drive:
-`[Add your Google Drive link here]`
-
+[`[Add your Google Drive link here]`
+](https://drive.google.com/drive/folders/16ess3l1gQ-7pPCDuZzuaeN31RK3GLx2x?usp=drive_link)
 ## License
 
-Built for educational and research purposes as part of the PITB AIRI Team AI Internship.
+Built for educational and research purposes as part of the PITB Internship.
