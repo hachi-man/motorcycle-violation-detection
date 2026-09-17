@@ -1,0 +1,29 @@
+# Dataset — too large for GitHub
+dataset/
+raw_data/
+raw_frames/
+
+# Model weights — too large for GitHub
+models/
+*.pt
+*.pth
+
+# Training results — large, available on Drive
+outputs/training_results/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Zip files
+*.zip
+
+# OS
+.DS_Store
+Thumbs.db

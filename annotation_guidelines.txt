@@ -1,0 +1,50 @@
+Annotation Guidelines — Motorcycle Violation Detection System
+=============================================================
+
+Tool: Roboflow Annotate
+Format: YOLOv8 (normalized coordinates)
+Classes: helmet, motorcycle_normal, motorcycle_overloaded, no_helmet
+
+GENERAL RULES
+-------------
+1. Draw TIGHT bounding boxes — box edges should hug the object boundary with minimal background
+2. Label EVERY visible instance of every class in every image
+3. One box per object — never group multiple objects in one box
+4. Do NOT annotate objects that are more than 50% cut off at the frame edge
+5. Do NOT annotate objects that are completely blurred and unidentifiable
+6. Do NOT annotate objects smaller than 15x15 pixels — too small to be meaningful
+
+CLASS-SPECIFIC RULES
+--------------------
+
+helmet:
+- Draw box around the helmet shell only
+- Include the visor and chin strap if visible
+- Do NOT include the rider's neck or shoulders below the helmet
+- If the helmet is partially obscured but class is clearly identifiable, annotate it
+
+no_helmet:
+- Draw box around the rider's head and face region
+- From top of head to chin
+- Do NOT include neck or shoulders below the chin
+- Only annotate if you can confirm this is a rider on a motorcycle without a helmet
+- Do NOT annotate pedestrian heads — only motorcycle riders
+
+motorcycle_normal:
+- Draw box from front wheel to rear wheel, top of rider's head to bottom of tires
+- Include the full motorcycle and all riders sitting on it
+- Label as motorcycle_normal only when 1 or 2 riders are visible
+- Do NOT include pedestrians standing beside the motorcycle
+
+motorcycle_overloaded:
+- Same box rules as motorcycle_normal
+- Label as motorcycle_overloaded when 3 or more riders are clearly visible
+- If rider count is ambiguous (bodies overlapping, unclear), label as motorcycle_normal
+
+AMBIGUOUS CASES
+---------------
+- Stopped or parked motorcycles with no visible riders: label as motorcycle_normal
+- Rider wearing a cap or scarf but no helmet: label as no_helmet
+- Rider with long hair that could be confused with helmet at distance: label as no_helmet if no helmet shell is visible
+- Sidecar or modified motorcycle: use best judgment based on rider count visible
+- When in doubt about a class: skip that instance — do not guess

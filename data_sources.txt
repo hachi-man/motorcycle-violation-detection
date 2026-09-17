@@ -1,0 +1,39 @@
+Dataset Sources — Motorcycle Violation Detection System
+======================================================
+
+All datasets used are publicly available and used for educational and research purposes.
+
+SOURCE 1 — Roboflow Universe: Helmet and No-Helmet Rider Detection
+URL: https://universe.roboflow.com (search: "helmet no helmet rider detection")
+License: Public (CC BY 4.0)
+Usage: Helmet and no_helmet class images
+Approximate images used: varies by dataset version
+
+SOURCE 2 — Kaggle: HelmetViolations Dataset
+URL: https://www.kaggle.com/datasets/pkdarabi/helmetviolations
+License: Public
+Usage: Supplementary helmet and no_helmet images
+Images: 1,004 original images
+
+SOURCE 3 — Roboflow Universe: Triple Ride Detection
+URL: https://universe.roboflow.com (search: "triple ride detection")
+License: Public
+Usage: motorcycle_overloaded class images
+Approximate images used: varies by dataset version
+
+SOURCE 4 — YouTube: Pakistani Road Footage (self-extracted frames)
+Sources: publicly available driving footage from Pakistani cities
+Method: frames extracted using yt-dlp and ffmpeg at 1 frame per 4 seconds
+Usage: authentic Pakistani road context, motorcycle and rider images
+Credit: various YouTube content creators (public videos)
+
+TOTAL DATASET AFTER CLEANING AND ANNOTATION
+--------------------------------------------
+Training images:   405
+Validation images: 116
+Test images:        57
+Total:             578
+
+Annotation tool: Roboflow Annotate
+Export format: YOLOv8 (YOLO txt format)
+Train/Val/Test split: 70% / 20% / 10%
