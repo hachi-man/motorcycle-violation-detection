@@ -1,0 +1,13 @@
+train: ../images/train
+val: ../images/val
+test: ../images/test
+
+nc: 4
+names: ['helmet', 'motorcycle_normal', 'motorcycle_overloaded', 'no_helmet']
+
+roboflow:
+  workspace: hassan-fc1yg
+  project: motorcycle-violation-detection
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/hassan-fc1yg/motorcycle-violation-detection/dataset/1
